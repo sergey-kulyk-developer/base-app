@@ -18,13 +18,14 @@ plugins {
 ```
 
 #### Signing Configs
+For pass use the next standart -> **projectname_pass**
 ```groovy
 signingConfigs {
   prod {
     storeFile file("keys.jks")
-    storePassword "storePassword"
+    storePassword "projectname_pass"
     keyAlias "key0"
-    keyPassword "keyPassword"
+    keyPassword "projectname_pass"
   }
 }
 ```
@@ -58,15 +59,7 @@ flavorDimensions "version"
 }
 ```
 
-
 ## Dependencies
-
-
-#### Annotation, [Link](https://developer.android.com/jetpack/androidx/releases/annotation#declaring_dependencies)
-```groovy
-// Annotation
-implementation "androidx.annotation:annotation:1.2.0"
-```
 
 #### Lifecycle, [Link](https://developer.android.com/jetpack/androidx/releases/lifecycle#kotlin)
 ```groovy
@@ -83,12 +76,6 @@ implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 // ViewBinding Delegate
 implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.4.6'
 ```
- 
-#### Recycler view with ConcatAdapter, [Link](https://developer.android.com/jetpack/androidx/releases/recyclerview#declaring_dependencies)
-```groovy
-// include ConcatAdapter
-implementation "androidx.recyclerview:recyclerview:1.2.1"
-````
 
 #### Navigation Components (for Kotlin), [Link](https://developer.android.com/guide/navigation/navigation-getting-started#groovy)
 ```groovy
@@ -319,8 +306,12 @@ implementation 'com.yqritc:android-scalablevideoview:1.0.4'
 #### PDF Viewer 
 ```groovy
 // PDF Viewer
-implementation 'com.github.barteksc:pdf-view-pager:1.0.3'
+implementation 'com.github.barteksc:pdf-view-pager:1.0.3' // For loading
+implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1' // Viewer
 ```
+
+## Extentions, [Link](https://github.com/FunkyMuse/KAHelpers)
+
 
 ## Utils
 KeyboardVisibilityEvent, [Link](https://github.com/yshrsmz/KeyboardVisibilityEvent)
@@ -328,3 +319,18 @@ KeyboardVisibilityEvent, [Link](https://github.com/yshrsmz/KeyboardVisibilityEve
 // Keyboard visibility event
 implementation "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3"
 ```
+
+## Debug
+#### LeakCanary, [Link](https://square.github.io/leakcanary/getting_started/)
+```groovy
+// debugImplementation because LeakCanary should only run in debug builds.
+debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+```
+
+#### Pluto, [Link](https://github.com/mocklets/pluto)
+```groovy
+debugImplementation 'com.mocklets:pluto:LATEST_VERSION'
+releaseImplementation'com.mocklets:pluto-no-op:LATEST_VERSION'
+```
+
+
