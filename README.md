@@ -310,8 +310,60 @@ implementation 'com.github.barteksc:pdf-view-pager:1.0.3' // For loading
 implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1' // Viewer
 ```
 
-## Extentions, [Link](https://github.com/FunkyMuse/KAHelpers)
+## Extentions
+For Extensions use [KAHelpers](https://github.com/FunkyMuse/KAHelpers) library. This library contains various extentions you can imagine. 
 
+```gradle
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+   }
+}
+```
+
+```gradle
+def utilsVersion = "3.0.9"
+
+// Activity
+implementation "com.github.FunkyMuse.KAHelpers:activity:$utilsVersion"
+
+// Animations
+implementation "com.github.FunkyMuse.KAHelpers:animations:$utilsVersion"
+
+// Common
+implementation "com.github.FunkyMuse.KAHelpers:common:$utilsVersion"
+
+// Intent
+implementation "com.github.FunkyMuse.KAHelpers:intent:$utilsVersion"
+
+// Context
+implementation "com.github.FunkyMuse.KAHelpers:context:$utilsVersion"
+
+// DateTime
+implementation "com.github.FunkyMuse.KAHelpers:dateTime:$utilsVersion"
+
+// Fragment
+implementation "com.github.FunkyMuse.KAHelpers:fragment:$utilsVersion"
+
+// Numbers
+implementation "com.github.FunkyMuse.KAHelpers:numbers:$utilsVersion"
+
+// Permissions
+implementation "com.github.FunkyMuse.KAHelpers:permissions:$utilsVersion"
+
+// String
+implementation "com.github.FunkyMuse.KAHelpers:string:$utilsVersion"
+
+// Toaster
+implementation "com.github.FunkyMuse.KAHelpers:toaster:$utilsVersion"
+
+// View
+implementation "com.github.FunkyMuse.KAHelpers:view:$utilsVersion"
+
+// Viewpager2
+implementation "com.github.FunkyMuse.KAHelpers:viewpager2:$utilsVersion"
+```
 
 ## Utils
 KeyboardVisibilityEvent, [Link](https://github.com/yshrsmz/KeyboardVisibilityEvent)
@@ -332,5 +384,3 @@ debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 debugImplementation 'com.mocklets:pluto:LATEST_VERSION'
 releaseImplementation'com.mocklets:pluto-no-op:LATEST_VERSION'
 ```
-
-
